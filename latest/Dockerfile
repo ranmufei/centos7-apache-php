@@ -26,9 +26,15 @@ RUN yum -y install \
     php-xml \
     php-gd \
     msmtp \
+    python-pip \
     && yum -y update bash \
     && rm -rf /var/cache/yum/* \
     && yum clean all
+
+RUN pip install \
+    requests \
+    urllib \
+    bs4
 
 #
 # UTC Timezone & Networking
