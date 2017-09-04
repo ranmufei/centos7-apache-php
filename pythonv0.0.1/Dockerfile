@@ -19,7 +19,7 @@ RUN pip install \
     bs4
 
 
-ADD run.sh .
+ADD run.sh /
 
 
 EXPOSE 80 443
