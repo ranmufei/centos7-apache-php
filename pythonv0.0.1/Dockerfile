@@ -1,4 +1,4 @@
-FROM piuma/centos7-apache-php:latest
+FROM ranmufei/centos7-apache-php:latest
 
 MAINTAINER Piuma <piuma@piumalab.org>
 
@@ -13,10 +13,6 @@ RUN yum -y install \
     && rm -rf /var/cache/yum/* \
     && yum clean all
 
-RUN pip install \
-    requests \
-    urllib \
-    bs4
 
 
 ADD run.sh /
